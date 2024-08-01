@@ -1,17 +1,31 @@
-const clickMe = () => {
-    alert("Thanks for clicking me. Hope you have a nice day!")
-}
-// $(document).ready(function () {
-//     // $('.materialboxed').materialbox();
-//     $('#clickMeButton').click(() => {
-//         // clickMe();
-//     })
-// });
+$(document).ready(function() {
+    $('.modal').modal();
+    $('#welcomeModal').modal('open');
+});
 
-$("#clickMeButton").click(function(){
-    $.ajax({url: '/addTwoNumber?n1=868&n2=8909', success: function(result){
-        alert("The sum is "+result.data);   
-        //   $("#div1").html(result);
-    }});
-  });
-  
+$("#clickMeButton").click(function(event) {
+    var firstNum = $("#firstNum").val();
+    var secondNum = $("#secondNum").val();
+    
+    $.get('/addTwoNumber', { n1: firstNum, n2: secondNum }, function(result) {
+        $("#resultDiv").html("<p>The sum is " + result.data + "</p>");
+    });
+});
+
+$("#clickMeButton1").click(function(event) {    
+    var firstNum = $("#firstNum").val();
+    var secondNum = $("#secondNum").val();
+    
+    $.get('/subTwoNumber', { n1: firstNum, n2: secondNum }, function(result) {
+        $("#resultDiv").html("<p>The difference is " + result.data + "</p>");
+    });
+});
+
+$("#clickMeButton2").click(function(event) {    
+    var firstNum = $("#firstNum").val();
+    var secondNum = $("#secondNum").val();
+    
+    $.get('/mulTwoNumber', { n1: firstNum, n2: secondNum }, function(result) {
+        $("#resultDiv").html("<p>The multiplication is " + result.data + "</p>");
+    });
+});
