@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav class="nav-header">
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="#" class="brand-logo">Cool Calculator</a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <div class="row custom-padding-body-top">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="First number" id="firstNum" type="number" class="validate">
+                    <label for="first_name">First Number</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Second number" id="secondNum" type="number" class="validate">
+                    <label for="last_name">Second Number</label>
+                </div>
+            </div>
+            <a class="purple waves-effect waves-light btn" id="clickMeButton">Calculate Sum (+)</a>
+            <a class="blue waves-effect waves-light btn" id="clickMeButton1">Calculate Difference (-)</a>
+            <a class="teal waves-effect waves-light btn" id="clickMeButton2">Calculate Multiplication (X)</a>
+        </form>
+    </div>
+
+    <div class="container">
+        <h5>Calculation Results</h5>
+        <div id="table-data"></div>
+    </div>
+
+    <footer class="page-footer fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Cool Calculator</h5>
+                    <p class="grey-text text-lighten-4">All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 Cool Calculator App
+                <a class="grey-text text-lighten-4 right" href="#">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+
+</html>
